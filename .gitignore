@@ -1,0 +1,18 @@
+# PowerShell Help
+Help/
+
+# Installed Modules
+Modules/Terminal-Icons/
+
+# PowerShell generated files
+Scripts/InstalledScriptInfos/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+#My Persenal File
+power-shell.txt
