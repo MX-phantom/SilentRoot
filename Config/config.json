@@ -1,0 +1,18 @@
+{
+	"Project": {
+		"Name":"SilentRoot",
+		"Version": "1.0.0"
+	},
+
+	"User": {
+		"Editor": "nvim",
+		"Browser": "Edge"
+	},
+
+	"Modules": {
+		"Git": true,
+		"Browser": true,
+		"Projects": true,
+		"ChatGPT": true
+	}
+}

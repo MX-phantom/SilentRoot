@@ -9,3 +9,5 @@ Sort-Object Name |
 ForEach-Object {
 	.$_.FullName
 }
+
+. "$PSScriptRoot\Core\Loader.ps1"
