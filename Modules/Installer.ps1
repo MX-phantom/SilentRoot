@@ -1,6 +1,6 @@
 function Install-SilentRoot {
 
-    $Installer = Join-Path $PSScriptRoot "..\Install.ps1"
+    $Installer = Join-Path (Get-ProjectRoot) "Install.ps1"
 
     & $Installer
 

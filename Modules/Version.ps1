@@ -1,6 +1,6 @@
 function Get-SilentRootVersion {
 
-    $VersionFile = Join-Path $PSScriptRoot "..\VERSION"
+    $VersionFile = Join-Path (Get-ProjectRoot) "VERSION"
 
     if (Test-Path $VersionFile) {
         Get-Content $VersionFile

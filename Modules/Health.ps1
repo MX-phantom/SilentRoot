@@ -1,5 +1,5 @@
 function Test-SilentRoot {
-	$Root = Join-Path $PSScriptRoot ".."
+	$Root = Get-ProjectRoot
 
 	$Items = @(
 		"VERSION"

@@ -1,6 +1,6 @@
 function Get-SilentRootConfig {
 
-    $configPath = Join-Path $PSScriptRoot "..\Config\config.json"
+    $configPath = Join-Path (Get-ProjectRoot) "Config\config.json"
 
     if (-not (Test-Path $configPath)) {
         Show-Error "Config file not found."
