@@ -7,8 +7,8 @@ function Stage {
 function Commit {
 	
 	Param(
-		[Parameter(Madantory)]
-		[sting]$Message
+		[Parameter(Mandatory)]
+		[string]$Message
 	)
 
 	git commit -m $Message
@@ -19,4 +19,17 @@ function Commit {
 	else {
 		Show-Error "Commit failed."
 	}
+}
+
+function Push {
+
+    git push
+
+    if ($LASTEXITCODE -eq 0) {
+        Show-Success "Changes published."
+    }
+    else {
+        Show-Error "Push failed."
+    }
+
 }
