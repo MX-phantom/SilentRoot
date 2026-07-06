@@ -12,7 +12,12 @@ function New-HelpIndex {
         $HelpPath `
         "Index.json"
 
-    # Find help files
+    # Statistics
+    $Scanned = 0
+    $Indexed = 0
+    $Skipped = 0
+
+    # Find Help Files
     $Files = Get-ChildItem `
         -Path $HelpPath `
         -Filter "*.help.md" `
@@ -20,10 +25,24 @@ function New-HelpIndex {
 
     $Index = foreach ($File in $Files) {
 
-        # Read metadata
-        $Metadata = Get-HelpMetadata -Path $File.FullName
+        $Scanned++
 
-        # Build index entry
+        # Read Metadata
+        $Metadata = Get-HelpMetadata `
+            -Path $File.FullName
+
+        if ($null -eq $Metadata) {
+
+            $Skipped++
+
+            Write-Verbose "Skipped: $($File.Name)"
+
+            continue
+        }
+
+        $Indexed++
+
+        # Build Index Entry
         [PSCustomObject]@{
 
             Title       = $Metadata.Title
@@ -35,7 +54,6 @@ function New-HelpIndex {
 
             File        = $File.Name
             Path        = $File.FullName
-
         }
 
     }
@@ -47,6 +65,20 @@ function New-HelpIndex {
             -Path $IndexPath `
             -Encoding UTF8
 
-    return $Index
+    # Summary
+    Write-Host ""
+    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor DarkGray
+    Write-Host " Help Index Builder" -ForegroundColor Cyan
+    Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor DarkGray
 
+    Write-Host (" Files Scanned : {0}" -f $Scanned)
+    Write-Host (" Indexed       : {0}" -f $Indexed) -ForegroundColor Green
+    Write-Host (" Skipped       : {0}" -f $Skipped) -ForegroundColor Yellow
+
+    Write-Host ""
+    Write-Host " Index saved to:" -ForegroundColor DarkGray
+    Write-Host " $IndexPath" -ForegroundColor Gray
+    Write-Host ""
+
+    return $Index
 }

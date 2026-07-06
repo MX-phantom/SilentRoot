@@ -1,37 +1,29 @@
-{
-  "version": "0.0.1",
-  "topics": [
-    {
-      "name": "Browser",
-      "file": "Browser.help.md"
-    },
-    {
-      "name": "Search",
-      "file": "Search.help.md"
-    },
-    {
-      "name": "Git",
-      "file": "Git.help.md"
-    },
-    {
-      "name": "Python",
-      "file": "Python.help.md"
-    },
-    {
-      "name": "Apps",
-      "file": "Apps.help.md"
-    },
-    {
-      "name": "System",
-      "file": "System.help.md"
-    },
-    {
-      "name": "Utils",
-      "file": "Utils.help.md"
-    },
-    {
-      "name": "Version",
-      "file": "Version.help.md"
-    }
-  ]
-}
+[
+  {
+    "Title": "Browser",
+    "Description": "Launch web browsers or open websites directly from PowerShell.",
+    "Category": "Web",
+    "Aliases": [
+      "browser",
+      "b"
+    ],
+    "Version": "0.1.0",
+    "Author": "Mr Max",
+    "File": "Browser.help.md",
+    "Path": "C:\\Users\\Mahdi_Nub\\Documents\\PowerShell\\HelpData\\Browser.help.md"
+  },
+  {
+    "Title": "Browser",
+    "Description": "Open browser commands.",
+    "Category": "Web",
+    "Aliases": [
+      "browser",
+      "web",
+      "chrome"
+    ],
+    "Version": "0.1.0",
+    "Author": "Mr Max",
+    "File": "Template.help.md",
+    "Path": "C:\\Users\\Mahdi_Nub\\Documents\\PowerShell\\HelpData\\Template.help.md"
+  }
+]

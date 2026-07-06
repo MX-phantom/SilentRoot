@@ -38,7 +38,8 @@ function Get-HelpMetadata {
 
     # Validate Front Matter
     if ($Start -eq -1 -or $End -eq -1) {
-        throw "Invalid help file. Front Matter not found."
+        Write-Verbose "Skipping '$Path' (No Front Matter found)."
+        return $null
     }
 
     # Extract Metadata

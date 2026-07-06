@@ -1,3 +1,12 @@
+---
+Title: Browser
+Description: Launch web browsers or open websites directly from PowerShell.
+Category: Web
+Aliases: browser,b
+Version: 0.1.0
+Author: Mr Max
+---
+
 # Browser
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -14,7 +23,7 @@ Available Commands
 
 • S         Search Google using one or more keywords.
 
-• Gmail    Open Gmail.
+• Gmail     Open Gmail.
 
 • AI        Open ChatGPT.
 
