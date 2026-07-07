@@ -6,8 +6,9 @@
 
 <img src="https://img.shields.io/badge/PowerShell-7+-5391FE?style=for-the-badge&logo=powershell&logoColor=white">
 <img src="https://img.shields.io/badge/Windows-10%2F11-0078D6?style=for-the-badge&logo=windows&logoColor=white">
-<img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/License-MIT-2E7D32?style=for-the-badge">
 <img src="https://img.shields.io/github/last-commit/MX-phantom/SilentRoot?style=for-the-badge">
+<img src="https://img.shields.io/github/repo-size/MX-phantom/SilentRoot?style=for-the-badge&color=6f42c1">
 
 </p>
 
