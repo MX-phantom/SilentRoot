@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Assets/Banner/banner.png" alt="SilentRoot Banner">
+  <img src="Assets/Banner/Banner.png" alt="SilentRoot Banner">
 </p>
 
 <p align="center">
